@@ -209,11 +209,7 @@
         }
 
         .nav-social {
-            display: flex;
-            gap: 0.75rem;
-            margin-left: 1rem;
-            padding-left: 1rem;
-            border-left: 1px solid var(--border-color);
+            display: none; /* Hidden - moved to footer */
         }
 
         .social-link {
@@ -1273,6 +1269,110 @@
                 flex: 0 0 160px;
             }
         }
+        
+        /* Footer */
+        .footer {
+            background: var(--gray-900);
+            color: var(--gray-100);
+            padding: 4rem 2rem 2rem;
+            margin-top: 6rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-section h3 {
+            color: white;
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .footer-section p {
+            color: var(--gray-100);
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .footer-social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: all var(--transition-speed) ease;
+            font-size: 1.25rem;
+        }
+        
+        .footer-social-link:hover {
+            background: var(--primary);
+            transform: translateY(-2px);
+        }
+        
+        .footer-social-link:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-links a {
+            color: var(--gray-100);
+            text-decoration: none;
+            transition: color var(--transition-speed) ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-links a:focus-visible {
+            outline: 2px solid white;
+            outline-offset: 2px;
+        }
+        
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            color: var(--gray-100);
+            font-size: 0.875rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                padding: 3rem 1.5rem 1.5rem;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
     </style>
 </head>
 
@@ -1753,6 +1853,58 @@
         </section>
     </div>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Srinivasan Chandran</h3>
+                    <p>RPA Solutions Architect & Technology Lead specializing in intelligent automation, AI/IDP integration, and enterprise software solutions.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/in/srinivasan-chandran" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/mailsriniworks" class="footer-social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:srini.vvk@gmail.com" class="footer-social-link" aria-label="Send Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>More</h3>
+                    <ul class="footer-links">
+                        <li><a href="#achievements">Achievements</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#education">Education</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Get In Touch</h3>
+                    <p>Interested in collaboration or have a project in mind? Let's connect!</p>
+                    <p><strong>Email:</strong> <a href="mailto:srini.vvk@gmail.com" style="color: white; text-decoration: underline;">srini.vvk@gmail.com</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Srinivasan Chandran. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
     <script>
         // Page Loader
         window.addEventListener('load', () => {
@@ -1768,8 +1920,9 @@
         const navLinks = document.querySelectorAll('.nav-link');
 
         menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
+            const isActive = menuToggle.classList.toggle('active');
             navMenu.classList.toggle('active');
+            menuToggle.setAttribute('aria-expanded', isActive.toString());
         });
 
         // Close menu when clicking a link
@@ -1777,6 +1930,7 @@
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
                 navMenu.classList.remove('active');
+                menuToggle.setAttribute('aria-expanded', 'false');
             });
         });
 
