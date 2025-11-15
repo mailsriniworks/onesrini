@@ -1521,22 +1521,22 @@
                 <div class="stats-grid">
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-briefcase"></i></div>
-                        <div class="stat-number" data-target="12">0</div>
+                        <div class="stat-number" data-target="12">12+</div>
                         <div class="stat-label">Years Experience</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-robot"></i></div>
-                        <div class="stat-number" data-target="7">0</div>
+                        <div class="stat-number" data-target="7">7+</div>
                         <div class="stat-label">Years in RPA</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                        <div class="stat-number" data-target="30">0</div>
+                        <div class="stat-number" data-target="30">30+</div>
                         <div class="stat-label">Automation Projects</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-icon"><i class="fas fa-chart-line"></i></div>
-                        <div class="stat-number" data-target="98">0</div>
+                        <div class="stat-number" data-target="98">98%</div>
                         <div class="stat-label">Efficiency Rate</div>
                     </div>
                 </div>
@@ -2032,23 +2032,36 @@
                     entry.target.style.transform = 'translateY(0)';
                     entry.target.classList.add('animated');
                     
-                    // Animate counters when stats section is visible
-                    if (entry.target.classList.contains('stat-card')) {
-                        const counter = entry.target.querySelector('.stat-number');
-                        if (counter && counter.getAttribute('data-target') && !counter.hasAttribute('data-animated')) {
-                            counter.setAttribute('data-animated', 'true');
-                            animateCounter(counter);
-                        }
-                    }
-                    
                     // Unobserve after animation to prevent re-triggering
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe stat cards
-        document.querySelectorAll('.stat-card').forEach(card => {
+        // Setup stat card observers  
+        const statCards = document.querySelectorAll('.stat-card');
+        const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+        
+        // Create a simpler observer just for stat cards
+        const statObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.hasAttribute('data-animated')) {
+                    entry.target.setAttribute('data-animated', 'true');
+                    animateCounter(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px'
+        });
+        
+        // Observe each stat number directly
+        statNumbers.forEach(counter => {
+            statObserver.observe(counter);
+        });
+        
+        // Also observe cards for other animations
+        statCards.forEach(card => {
             observer.observe(card);
         });
 
