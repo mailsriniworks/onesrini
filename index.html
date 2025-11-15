@@ -4,256 +4,1234 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Resume - Start Bootstrap Theme</title>
+    <meta name="description" content="Srinivasan Chandran - RPA Solutions Architect | Group Manager - RPA Technology Lead with 12+ years of experience in Intelligent Automation, UiPath, Blue Prism, and AI/IDP" />
+    <meta name="author" content="Srinivasan Chandran" />
+    <meta name="keywords" content="RPA, UiPath, Blue Prism, Automation Anywhere, Intelligent Automation, AI, IDP, Solutions Architect, .NET, Cloud, Azure" />
+    <title>Srinivasan Chandran - RPA Solutions Architect | Portfolio</title>
     <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
     <!-- Font Awesome icons (free version)-->
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <!-- Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet"
-        type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-    <!-- Core theme CSS (includes Bootstrap)-->
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <style>
+        /* Modern CSS Reset and Variables */
+        :root {
+            --primary-color: #0066cc;
+            --secondary-color: #00c9ff;
+            --gradient: linear-gradient(135deg, #0066cc 0%, #00c9ff 100%);
+            --text-dark: #1a1a1a;
+            --text-light: #6c757d;
+            --bg-light: #f8f9fa;
+            --bg-white: #ffffff;
+            --shadow-sm: 0 2px 8px rgba(0, 102, 204, 0.08);
+            --shadow-md: 0 4px 16px rgba(0, 102, 204, 0.12);
+            --shadow-lg: 0 8px 24px rgba(0, 102, 204, 0.16);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding-top: 70px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* Modern Navigation */
+        .navbar {
+            background: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            padding: 1rem 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+        }
+
+        .navbar.scrolled {
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-brand {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+            min-height: auto;
+        }
+
+        section:nth-child(even) {
+            background-color: var(--bg-white);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 3rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient);
+            color: white;
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .hero .role {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            opacity: 0.95;
+        }
+
+        .hero .subtitle {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .stat-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-md);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-light);
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gradient);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            border: 4px solid var(--bg-white);
+            box-shadow: 0 0 0 4px var(--secondary-color);
+        }
+
+        .timeline-content {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .timeline-content:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(5px);
+        }
+
+        .company-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .company-name {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .job-title {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .duration-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--gradient);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .location-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .skill-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .skill-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .skill-category {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            padding: 0.5rem 1rem;
+            background: var(--bg-light);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+
+        .skill-tag:hover {
+            background: var(--gradient);
+            color: white;
+        }
+
+        /* Achievements */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .achievement-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            border-left: 4px solid var(--primary-color);
+            transition: var(--transition);
+        }
+
+        .achievement-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateX(5px);
+        }
+
+        .achievement-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .achievement-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-desc {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .cert-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .cert-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .cert-badge {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .cert-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-dark);
+        }
+
+        .cert-issuer {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .cert-id {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            font-family: monospace;
+            margin-bottom: 1rem;
+        }
+
+        .verify-link {
+            display: inline-block;
+            padding: 0.5rem 1.5rem;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .verify-link:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-md);
+        }
+
+        /* Education */
+        .education-card {
+            background: var(--bg-white);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            margin-bottom: 2rem;
+        }
+
+        .education-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .degree {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .institution {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background: var(--bg-white);
+                width: 100%;
+                text-align: center;
+                transition: var(--transition);
+                box-shadow: var(--shadow-md);
+                padding: 2rem 0;
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: flex;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .role {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline {
+                padding-left: 1rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+
+            .company-header {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Utility Classes */
+        .text-gradient {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .mb-4 {
+            margin-bottom: 2rem;
+        }
+
+        .mb-2 {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: 0.5rem;
+        }
+
+        ul li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body id="page-top">
-    <!-- Navigation-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top">
-            <span class="d-block d-lg-none">Srinivasan Chandran</span>
-            <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2"
-                    src="assets/img/profile.jpg" alt="..." /></span>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span
-                class="navbar-toggler-icon"></span></button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
-                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+    <!-- Modern Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#page-top" class="nav-brand">Srinivasan Chandran</a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
             </ul>
         </div>
     </nav>
-    <!-- Page Content-->
 
-    <div class="container-fluid p-0">
-        <!-- About-->
-        <section class="resume-section" id="about">
-            <div class="resume-section-content">
-                <h1 class="mb-0">
-                    Srinivasan
-                    <span class="text-primary">Chandran</span>
-                </h1>
-                <div class="subheading mb-5">
-                    <p>8601 Westown Pkwy, Unit 13104</p>
-                    <p>West Desmoines,IA - 50266 , USA</p>
-                    <p>(515)-346-4823</p>
-                    <p><a href="mailto:srini.vvk@gmail.com">srini.vvk@gmail.com</a></p>
+    <!-- Hero Section -->
+
+    <section class="hero">
+        <div class="container">
+            <h1>Srinivasan Chandran</h1>
+            <p class="role">Group Manager – RPA Technology Lead</p>
+            <p class="subtitle">
+                RPA Solutions Architect with 12+ years of experience in Intelligent Automation, specializing in UiPath, Blue Prism, and AI/IDP solutions. 
+                Proven track record of delivering 30+ automation projects with 98% efficiency across Insurance, Banking, and Digital Operations domains.
+            </p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/srinivasan-chandran" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/mailsriniworks" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:srini.vvk@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section with Stats -->
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Years of Experience</div>
                 </div>
-                <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="large" data-theme="dark"
-                    data-type="HORIZONTAL" data-vanity="srinivasan-chandran" data-version="v1">
-                    <a
-                        class="badge-base__link LI-simple-link"
-                        href="https://www.linkedin.com/in/srinivasan-chandran?trk=profile-badge">Srinivasan Chandran</a>
+                <div class="stat-card">
+                    <div class="stat-number">7+</div>
+                    <div class="stat-label">Years in RPA</div>
                 </div>
-                <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for
-                    high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to
-                    further the overall value proposition.</p>
-                <div class="social-icons">
-                    <a class="social-icon" href="#!"><i class="fab fa-linkedin-in"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-github"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
-                    <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                <div class="stat-card">
+                    <div class="stat-number">30+</div>
+                    <div class="stat-label">Automation Projects</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Efficiency Rate</div>
                 </div>
             </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Experience-->
-        <section class="resume-section" id="experience">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Experience</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Senior Web Developer</h3>
-                        <div class="subheading mb-3">Intelitec Solutions</div>
-                        <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of
-                            the day, going forward, a new normal that has evolved from generation X is on the runway
-                            heading towards a streamlined cloud solution. User generated content in real-time will have
-                            multiple touchpoints for offshoring.</p>
+
+            <div style="margin-top: 3rem; text-align: center; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light);">
+                    As a seasoned RPA Solutions Architect and Technology Lead, I specialize in designing and implementing 
+                    end-to-end intelligent automation solutions. With extensive experience in UiPath, Blue Prism, and Automation Anywhere, 
+                    I've successfully led teams across multiple geographies, delivering transformative automation projects that 
+                    achieve up to 80% reduction in Average Handle Time (AHT) and drive significant business value.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.8; color: var(--text-light); margin-top: 1rem;">
+                    My expertise spans across Intelligent Document Processing (IDP), AI/ML integration, cloud technologies, 
+                    and full-stack development, with 5 years of onsite experience in Hong Kong and the USA, 
+                    working with global clients in Insurance, Banking, and Digital Operations domains.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- Experience Section -->
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            
+            <div class="timeline">
+                <!-- WNS Global Services -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">WNS Global Services</h3>
+                                <p class="job-title">Group Manager – RPA Technology Lead</p>
+                                <div class="location-badge">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>India</span>
+                                </div>
+                            </div>
+                            <span class="duration-badge">Sep 2021 - Present</span>
+                        </div>
+                        <ul>
+                            <li>Leading RPA Center of Excellence (CoE) with responsibility for solution architecture, team leadership, and delivery excellence</li>
+                            <li>Architecting and implementing enterprise-grade automation solutions using UiPath, Blue Prism, and Automation Anywhere</li>
+                            <li>Managing cross-functional teams and mentoring 10+ RPA developers across multiple projects</li>
+                            <li>Driving intelligent automation initiatives integrating AI/ML, IDP (Intelligent Document Processing), and OCR technologies</li>
+                            <li>Achieved 30+ successful automation implementations with 98% efficiency and 80% AHT reduction</li>
+                            <li>Establishing best practices, governance frameworks, and standardization across automation programs</li>
+                            <li>Stakeholder management with C-level executives for strategic automation roadmap and ROI presentation</li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Developer</h3>
-                        <div class="subheading mb-3">Intelitec Solutions</div>
-                        <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test.
-                            Override the digital divide with additional clickthroughs from DevOps. Nanotechnology
-                            immersion along the information highway will close the loop on focusing solely on the bottom
-                            line.</p>
+
+                <!-- Cognizant -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Cognizant</h3>
+                                <p class="job-title">Senior RPA Developer / Technical Lead</p>
+                                <div class="location-badge">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>Hong Kong & USA (Onsite - 3 years)</span>
+                                </div>
+                            </div>
+                            <span class="duration-badge">Jun 2018 - Sep 2021</span>
+                        </div>
+                        <ul>
+                            <li>Led RPA development teams in designing and deploying complex automation solutions for global insurance clients</li>
+                            <li>3 years onsite experience in Hong Kong and USA, working directly with international stakeholders</li>
+                            <li>Specialized in UiPath and Blue Prism platforms with integration to enterprise systems (SAP, Salesforce, Oracle)</li>
+                            <li>Implemented Intelligent Document Processing solutions using ABBYY FlexiCapture and UiPath Document Understanding</li>
+                            <li>Developed robust error handling, exception management, and monitoring frameworks</li>
+                            <li>Created technical documentation, solution design documents, and process definition documents (PDD)</li>
+                            <li>Conducted knowledge transfer sessions and trained offshore teams on automation best practices</li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
                 </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Junior Web Designer</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p>Podcasting operational change management inside of workflows to establish a framework. Taking
-                            seamless key performance indicators offline to maximise the long tail. Keeping your eye on
-                            the ball while performing a deep dive on the start-up mentality to derive convergence on
-                            cross-platform integration.</p>
+
+                <!-- Wipro -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="company-header">
+                            <div>
+                                <h3 class="company-name">Wipro Limited</h3>
+                                <p class="job-title">Senior Software Engineer / RPA Developer</p>
+                                <div class="location-badge">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <span>USA (Onsite - 2 years) & India</span>
+                                </div>
+                            </div>
+                            <span class="duration-badge">Jul 2013 - May 2018</span>
+                        </div>
+                        <ul>
+                            <li>Started career as .NET Developer and transitioned to RPA development with UiPath and Blue Prism</li>
+                            <li>2 years onsite experience in USA working on CITI Bank automation projects</li>
+                            <li>Developed end-to-end automation solutions for banking operations including loan processing, KYC, and reconciliation</li>
+                            <li>Expertise in .NET, C#, ASP.NET, SQL Server, and web technologies</li>
+                            <li>Implemented RESTful APIs and web services for automation integration</li>
+                            <li>Participated in Agile/Scrum development methodology with continuous integration and deployment</li>
+                            <li>Recognition for outstanding performance and client satisfaction</li>
+                        </ul>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Web Design Intern</h3>
-                        <div class="subheading mb-3">Shout! Media Productions</div>
-                        <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically
-                            procrastinate B2C users after installed base benefits. Dramatically visualize customer
-                            directed convergence without revolutionary ROI.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
                 </div>
             </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Education-->
-        <section class="resume-section" id="education">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Education</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">University of Colorado Boulder</h3>
-                        <div class="subheading mb-3">Bachelor of Science</div>
-                        <div>Computer Science - Web Development Track</div>
-                        <p>GPA: 3.23</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            
+            <div class="skills-grid">
+                <!-- RPA Tools -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <h3 class="skill-category">RPA Platforms</h3>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">James Buchanan High School</h3>
-                        <div class="subheading mb-3">Technology Magnet Program</div>
-                        <p>GPA: 3.56</p>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UiPath</span>
+                        <span class="skill-tag">Blue Prism</span>
+                        <span class="skill-tag">Automation Anywhere (AA360)</span>
+                        <span class="skill-tag">UiPath Orchestrator</span>
+                        <span class="skill-tag">RE Framework</span>
                     </div>
-                    <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
+                </div>
+
+                <!-- AI/IDP -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="skill-category">AI / IDP</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">UiPath Document Understanding</span>
+                        <span class="skill-tag">ABBYY FlexiCapture</span>
+                        <span class="skill-tag">OCR Technologies</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Computer Vision</span>
+                    </div>
+                </div>
+
+                <!-- Programming -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="skill-category">Programming</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">C#</span>
+                        <span class="skill-tag">.NET Core</span>
+                        <span class="skill-tag">VB.NET</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">VBA</span>
+                        <span class="skill-tag">PowerShell</span>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-window-maximize"></i>
+                        </div>
+                        <h3 class="skill-category">Web Development</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">ASP.NET</span>
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">jQuery</span>
+                        <span class="skill-tag">RESTful APIs</span>
+                    </div>
+                </div>
+
+                <!-- Cloud & DevOps -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3 class="skill-category">Cloud & DevOps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microsoft Azure</span>
+                        <span class="skill-tag">Azure AI Services</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">TFS</span>
+                        <span class="skill-tag">CI/CD</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="skill-category">Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SQL Server</span>
+                        <span class="skill-tag">Oracle</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">T-SQL</span>
+                    </div>
+                </div>
+
+                <!-- Enterprise Applications -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="skill-category">Enterprise Apps</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">SAP</span>
+                        <span class="skill-tag">Salesforce</span>
+                        <span class="skill-tag">Oracle EBS</span>
+                        <span class="skill-tag">Guidewire</span>
+                        <span class="skill-tag">SharePoint</span>
+                    </div>
+                </div>
+
+                <!-- BI & Analytics -->
+                <div class="skill-card">
+                    <div class="skill-card-header">
+                        <div class="skill-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3 class="skill-category">BI & Analytics</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Power BI</span>
+                        <span class="skill-tag">Tableau</span>
+                        <span class="skill-tag">UiPath Insights</span>
+                        <span class="skill-tag">Excel Advanced</span>
+                    </div>
                 </div>
             </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Skills-->
-        <section class="resume-section" id="skills">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Skills</h2>
-                <div class="subheading mb-3">Programming Languages & Tools</div>
-                <ul class="list-inline dev-icons">
-                    <li class="list-inline-item"><i class="fab fa-html5"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-angular"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-react"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-sass"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-less"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
-                    <li class="list-inline-item"><i class="fab fa-npm"></i></li>
-                </ul>
-                <div class="subheading mb-3">Workflow</div>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Mobile-First, Responsive Design
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Cross Browser Testing & Debugging
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Cross Functional Teams
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-check"></i></span>
-                        Agile Development & Scrum
-                    </li>
-                </ul>
+        </div>
+    </section>
+    <!-- Achievements Section -->
+    <section id="achievements">
+        <div class="container">
+            <h2 class="section-title">Key Achievements</h2>
+            
+            <div class="achievements-grid">
+                <!-- Business Impact -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="achievement-title">Business Impact</h3>
+                    <p class="achievement-desc">
+                        Delivered 30+ automation projects achieving 98% process efficiency and 80% reduction in Average Handle Time (AHT). 
+                        Generated significant ROI through cost savings and productivity improvements.
+                    </p>
+                </div>
+
+                <!-- Technical Excellence -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3 class="achievement-title">Technical Excellence</h3>
+                    <p class="achievement-desc">
+                        Architected complex automation solutions integrating AI/ML, IDP, and OCR technologies. 
+                        Established best practices and frameworks adopted across multiple projects and teams.
+                    </p>
+                </div>
+
+                <!-- Leadership -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="achievement-title">Leadership & Mentoring</h3>
+                    <p class="achievement-desc">
+                        Led and mentored teams of 10+ RPA developers. Conducted training sessions and knowledge transfer 
+                        programs, fostering a culture of continuous learning and innovation.
+                    </p>
+                </div>
+
+                <!-- Global Experience -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="achievement-title">International Exposure</h3>
+                    <p class="achievement-desc">
+                        5 years onsite experience in Hong Kong and USA, working with global Fortune 500 clients. 
+                        Successfully managed cross-cultural teams and stakeholder relationships.
+                    </p>
+                </div>
+
+                <!-- Client Satisfaction -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="achievement-title">Client Satisfaction</h3>
+                    <p class="achievement-desc">
+                        Consistently received recognition for outstanding performance and client satisfaction. 
+                        Built long-term relationships with key stakeholders through reliable delivery.
+                    </p>
+                </div>
+
+                <!-- Innovation -->
+                <div class="achievement-card">
+                    <div class="achievement-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="achievement-title">Innovation</h3>
+                    <p class="achievement-desc">
+                        Pioneered implementation of Intelligent Document Processing solutions and AI-powered automation. 
+                        Continuously explored emerging technologies to enhance automation capabilities.
+                    </p>
+                </div>
             </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Interests-->
-        <section class="resume-section" id="interests">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Interests</h2>
-                <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid
-                    skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking,
-                    free climbing, and kayaking.</p>
-                <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television
-                    shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest
-                    technology advancements in the front-end web development world.</p>
+        </div>
+    </section>
+    <!-- Certifications Section -->
+    <section id="certifications">
+        <div class="container">
+            <h2 class="section-title">Professional Certifications</h2>
+            
+            <div class="certifications-grid">
+                <!-- UiPath Solutions Architect -->
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="cert-title">UiPath Solutions Architect</h3>
+                    <p class="cert-issuer">UiPath</p>
+                    <a href="https://credentials.uipath.com/" target="_blank" class="verify-link">Verify Certification</a>
+                </div>
+
+                <!-- UiPath Advanced Developer -->
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="cert-title">UiPath Advanced RPA Developer</h3>
+                    <p class="cert-issuer">UiPath</p>
+                    <p class="cert-id">ID: 156661163286274783</p>
+                    <a href="https://credentials.uipath.com/" target="_blank" class="verify-link">Verify Certification</a>
+                </div>
+
+                <!-- Blue Prism -->
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3 class="cert-title">Blue Prism Certified Developer AD01</h3>
+                    <p class="cert-issuer">Blue Prism</p>
+                    <p class="cert-id">ID: 363998676</p>
+                    <a href="https://www.blueprism.com/certification/" target="_blank" class="verify-link">Verify Certification</a>
+                </div>
+
+                <!-- Azure AI Fundamentals -->
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3 class="cert-title">Microsoft Azure AI Fundamentals</h3>
+                    <p class="cert-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/en-us/certifications/" target="_blank" class="verify-link">Verify Certification</a>
+                </div>
+
+                <!-- Azure Fundamentals -->
+                <div class="cert-card">
+                    <div class="cert-badge">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3 class="cert-title">Microsoft Azure Fundamentals</h3>
+                    <p class="cert-issuer">Microsoft</p>
+                    <a href="https://learn.microsoft.com/en-us/certifications/" target="_blank" class="verify-link">Verify Certification</a>
+                </div>
             </div>
-        </section>
-        <hr class="m-0" />
-        <!-- Awards-->
-        <section class="resume-section" id="awards">
-            <div class="resume-section-content">
-                <h2 class="mb-5">Awards & Certifications</h2>
-                <ul class="fa-ul mb-0">
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Google Analytics Certified Developer
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        Mobile Web Specialist - Google Certification
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - University of Colorado Boulder - Emerging Tech Competition 2009
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        2
-                        <sup>nd</sup>
-                        Place - University of Colorado Boulder - Emerging Tech Competition 2008
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        1
-                        <sup>st</sup>
-                        Place - James Buchanan High School - Hackathon 2006
-                    </li>
-                    <li>
-                        <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
-                        3
-                        <sup>rd</sup>
-                        Place - James Buchanan High School - Hackathon 2005
-                    </li>
-                </ul>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            
+            <div class="education-card">
+                <div class="education-header">
+                    <div>
+                        <h3 class="degree">Bachelor of Engineering in Computer Science</h3>
+                        <p class="institution">Anna University</p>
+                    </div>
+                    <span class="duration-badge">2009 - 2013</span>
+                </div>
+                <p style="color: var(--text-light);">
+                    Focused on software engineering, algorithms, data structures, and computer systems. 
+                    Built strong foundation in programming and problem-solving skills.
+                </p>
             </div>
-        </section>
-    </div>
-    <!-- Bootstrap core JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Core theme JS-->
-    <script src="js/scripts.js"></script>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer style="background: var(--text-dark); color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <p style="margin-bottom: 1rem; font-size: 1.1rem; font-weight: 500;">Let's Connect</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/srinivasan-chandran" target="_blank" class="social-link" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/mailsriniworks" target="_blank" class="social-link" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:srini.vvk@gmail.com" class="social-link" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            <p style="margin-top: 2rem; color: rgba(255, 255, 255, 0.7); font-size: 0.9rem;">
+                © 2024 Srinivasan Chandran. All rights reserved.
+            </p>
+        </div>
+    </footer>
+    <!-- Custom JavaScript -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        mobileMenu.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a nav link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Add active class to current nav link on scroll
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
